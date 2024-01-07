@@ -1,16 +1,16 @@
 
-# Scrpd: The Premier Web Scraping Framework -- WORK IN PROGRESS
+# Poof: The Premier Web Scraping Framework -- WORK IN PROGRESS
 
 ## Overview
 
-**Scrpd** is a comprehensive web scraping framework designed for versatility and efficiency in data extraction from the web. This framework is a boon for developers, data analysts, and businesses looking to harness the power of web data for a variety of applications. Whether it's competitive analysis, market research, or automated data collection for machine learning models, Scrpd equips you with the tools needed to extract and process web data effortlessly.
+**Poof** is a comprehensive web scraping framework designed for versatility and efficiency in data extraction from the web. Tailored for developers, data analysts, and businesses, Poof is the perfect tool for competitive analysis, market research, or automated data collection for machine learning models. It equips users with the tools necessary to extract and process web data effortlessly.
 
 ## Key Features
 
-- **Versatile User-Agent Generation:** Simulate requests from a wide range of devices and browsers, enhancing the success rate of scraping diverse web content.
-- **Customizable Request Headers:** Craft request headers to seamlessly blend into traffic, minimizing the chances of detection and blockage.
-- **Robust Testing Suite:** Integrated with a comprehensive testing framework to ensure reliability and robustness in your scraping operations.
-- **Modular Design:** Extensible and adaptable architecture allows for easy integration with other tools and customization to fit specific scraping needs.
+- **Versatile User-Agent Generation:** Simulates requests from a wide range of devices and browsers to enhance the success rate in scraping diverse web content.
+- **Customizable Request Headers:** Allows crafting of request headers to blend seamlessly into web traffic, minimizing detection and blockage.
+- **Robust Proxy Management:** Incorporates advanced proxy handling, including support for HTTP, HTTPS, SOCKS4, and SOCKS5 proxies, to overcome access restrictions and maintain anonymity.
+- **Modular Design:** Facilitates easy integration with other tools and customization to meet specific scraping requirements.
 
 ## Modules and API Reference
 
@@ -55,6 +55,21 @@ class TestUserAgents(unittest.TestCase):
     # Suite of unittest methods for UserAgent validation
 ```
 
+### 4. Proxy Management
+
+Handle and rotate proxies dynamically during web scraping to maintain anonymity and access diverse web resources.
+
+```python
+class Proxy:
+    # Proxy configuration and management
+
+class ProxyPool:
+    # Manage a pool of proxies for efficient rotation and use
+
+class RequestSender:
+    # Handle HTTP and HTTPS requests through proxies
+```
+
 ## Use Cases
 
 - **Market and Competitive Analysis:** Extract and analyze data from competitor websites for strategic insights.
@@ -64,9 +79,10 @@ class TestUserAgents(unittest.TestCase):
 
 ## Getting Started
 
-Embrace the power of Scrpd for your web scraping needs. Its user-friendly design, combined with powerful scraping capabilities, makes it an essential tool for any data-driven task or project.
+Embrace the power of Poof for your web scraping needs. Its user-friendly design, combined with powerful scraping capabilities, makes it an essential tool for any data-driven task or project.
 
 ---
 
-Download and integrate **Scrpd** into your workflow to transform how you interact with web data.
+Download and integrate **Poof** into your workflow to transform how you interact with web data.
 
+For more information and to download Poof, visit [GitHub Repository](https://github.com/Zaydo123/poof).  # Replace with your actual repository link

@@ -1,6 +1,10 @@
 import unittest
 import useragents
 
+
+# not all tests are made yet
+
+
 class TestUserAgents(unittest.TestCase):
 
     def setUp(self):
