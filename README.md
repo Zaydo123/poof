@@ -1,9 +1,9 @@
 
-# Poof: The Premier Web Scraping Framework -- WORK IN PROGRESS
+# Poof: Web Scraping Toolbox -- WORK IN PROGRESS
 
 ## Overview
 
-**Poof** is a comprehensive web scraping framework designed for versatility and efficiency in data extraction from the web. Tailored for developers, data analysts, and businesses, Poof is the perfect tool for competitive analysis, market research, or automated data collection for machine learning models. It equips users with the tools necessary to extract and process web data effortlessly.
+**Poof** is a comprehensive web scraping library designed for versatility and efficiency in data extraction from the web. Tailored for developers, data analysts, and businesses, Poof is the perfect tool for competitive analysis, market research, or automated data collection for machine learning models. It equips users with the tools necessary to extract and process web data effortlessly.
 
 ## Key Features
 
