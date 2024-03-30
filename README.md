@@ -1,88 +1,60 @@
 
-# Poof: Web Scraping Toolbox -- WORK IN PROGRESS
+# Poof: Web Scraping and Data Mining Utility
 
 ## Overview
 
-**Poof** is a comprehensive web scraping library designed for versatility and efficiency in data extraction from the web. Tailored for developers, data analysts, and businesses, Poof is the perfect tool for competitive analysis, market research, or automated data collection for machine learning models. It equips users with the tools necessary to extract and process web data effortlessly.
+**Poof** is a comprehensive web scraping library designed for versatility and ease of use. It provides a robust set of tools for extracting data from websites, enabling users to gather valuable insights and information for a wide range of applications. It provides advanced features such as realistic user-agent generation and proxy management to enhance scraping efficiency and avoid detection. With **Poof**, users can effortlessly scrape web content, process data, and extract valuable information for analysis and decision-making.
 
 ## Key Features
 
 - **Versatile User-Agent Generation:** Simulates requests from a wide range of devices and browsers to enhance the success rate in scraping diverse web content.
-- **Customizable Request Headers:** Allows crafting of request headers to blend seamlessly into web traffic, minimizing detection and blockage.
-- **Robust Proxy Management:** Incorporates advanced proxy handling, including support for HTTP, HTTPS, SOCKS4, and SOCKS5 proxies, to overcome access restrictions and maintain anonymity.
-- **Modular Design:** Facilitates easy integration with other tools and customization to meet specific scraping requirements.
-
-## Modules and API Reference
-
-### 1. HeadersGenerator (`headers.py`)
-
-Craft custom headers for HTTP requests to enhance access and reduce blockage likelihood.
-
-```python
-class HeadersGenerator:
-    def __init__(self, **kwargs):
-        # Initialize with custom parameters
-
-    def generate_headers(self):
-        # Generate and return custom headers
-```
-
-### 2. UserAgent (`useragents.py`)
-
-Provides a plethora of user agent strings to impersonate various browsers and devices, crucial for effective scraping.
-
-```python
-class UserAgent:
-    def __init__(self):
-        # Initialization...
-
-    def get_all(self):
-        # Retrieve all user agents
-
-    def get(self, platform=None, quantity=1):
-        # Get user agents for a specific platform
-
-    def get_random(self, platform=None, quantity=1):
-        # Get random user agent(s) for a given platform
-```
-
-### 3. TestUserAgents (`tests.py`)
-
-Ensures the functionality and reliability of the UserAgent module, a critical component of the scraping process.
-
-```python
-class TestUserAgents(unittest.TestCase):
-    # Suite of unittest methods for UserAgent validation
-```
-
-### 4. Proxy Management
-
-Handle and rotate proxies dynamically during web scraping to maintain anonymity and access diverse web resources.
-
-```python
-class Proxy:
-    # Proxy configuration and management
-
-class ProxyPool:
-    # Manage a pool of proxies for efficient rotation and use
-
-class RequestSender:
-    # Handle HTTP and HTTPS requests through proxies
-```
-
-## Use Cases
-
-- **Market and Competitive Analysis:** Extract and analyze data from competitor websites for strategic insights.
-- **Automated Content Aggregation:** Collect and curate content from various web sources for media or research purposes.
-- **SEO and Web Analytics:** Perform detailed SEO audits and web content analysis.
-- **Data Mining for AI/ML:** Gather extensive datasets required for training sophisticated machine learning algorithms.
+- **Abstracted Proxied Requests:** Simplifies the process of making requests through proxies by encapsulating the necessary configurations within the library.
+- **Robust Proxy Management:** Incorporates advanced proxy testing and handling, including support for HTTP, HTTPS, SOCKS4, and SOCKS5 proxies, to overcome access restrictions and maintain anonymity.
 
 ## Getting Started
 
 Embrace the power of Poof for your web scraping needs. Its user-friendly design, combined with powerful scraping capabilities, makes it an essential tool for any data-driven task or project.
 
+
+### Installation
+~~poof can be installed via pip:~~
+
+```bash
+~pip install poof_util
+```
+
+(Not yet available on PyPi)
+
+### Usage
+
+Basic Usage: 
+```python
+from poof_util import ProxyPool, Proxy, RequestSender
+
+# Initialize a proxy pool
+pool = ProxyPool()
+
+# Load proxies from a file
+pool.read_file('proxies.txt') # Optional: specify the proxy type (http, https, socks4, socks5) - default is http
+
+# Add a proxy manually - Proxy(ip, port, username, password, protocol, speed, status)
+pool.add(Proxy('127.0.0.1', '9050', 'user', 'pass', 'socks5', 100, 'active'))
+
+# Print the number of proxies in the pool
+print(pool.size())
+
+# Initialize a request sender with the proxy pool
+s = RequestSender(pool,1) # 1 is the maximum number of request retries - defaults to 3 
+
+# Make a request
+response = s.send_request('get', 'http://localhost:3000/ip') # Returns a requests.Response object or raises an exception on failure
+
+# Print the response
+print(response.text)
+```
+more examples to be added soon.
 ---
 
 Download and integrate **Poof** into your workflow to transform how you interact with web data.
 
-For more information and to download Poof, visit [GitHub Repository](https://github.com/Zaydo123/poof).  # Replace with your actual repository link
+For more information and to download Poof, visit [GitHub Repository](https://github.com/Zaydo123/poof).

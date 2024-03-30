@@ -1,10 +1,9 @@
-from request import RequestSender
+from poof_util.requests import RequestSender
 import requests
 import random
 import time
 import threading
 import queue
-
 
 class ProxyTester:
     def __init__(self, proxies, thread_count=1):
@@ -91,8 +90,8 @@ class Proxy:
         self.port = port
         self.username = username
         self.password = password
-        self.speed_ms = None
-        self.status = None
+        self.speed_ms = speed_ms
+        self.status = status
 
     def get_protocol(self):
         return self.protocol

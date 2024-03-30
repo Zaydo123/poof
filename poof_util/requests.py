@@ -9,9 +9,7 @@ class RequestSender:
 
     def send_request(self, method, url, data=None, params=None, headers=None, custom_proxy=None, retries=0):
         if retries > self.max_retries:
-            return {
-                'text': 'Max retries exceeded',
-            }
+            raise Exception('Max retries exceeded')
 
         with requests.Session() as session:
             proxy = custom_proxy if custom_proxy else self.get_proxy()

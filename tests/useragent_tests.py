@@ -1,14 +1,11 @@
+from poof_util import UserAgent
 import unittest
-import useragents
-
-
-# not all tests are made yet
 
 
 class TestUserAgents(unittest.TestCase):
 
     def setUp(self):
-        self.generator = useragents.UserAgent()
+        self.generator = UserAgent()
 
     def test_get_all(self):
         result = self.generator.get_all()
@@ -43,6 +40,7 @@ class TestUserAgents(unittest.TestCase):
     def test_get_with_invalid_platform(self):
         result = self.generator.get(platform="invalid_platform")
         self.assertEqual(result, [])
+
 
 if __name__ == '__main__':
     unittest.main()
