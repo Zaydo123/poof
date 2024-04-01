@@ -1,5 +1,6 @@
 
 # Poof: Web Scraping and Data Mining Utility
+[![Python package](https://github.com/Zaydo123/poof/actions/workflows/python-package.yml/badge.svg)](https://github.com/Zaydo123/poof/actions/workflows/python-package.yml) 
 
 ## Overview
 
