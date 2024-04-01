@@ -10,7 +10,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="poof-util",
-    version="0.1.0",
+    version="0.1.1",
     description="Demo library",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -24,7 +24,7 @@ setup(
     packages=["poof_util"],
     include_package_data=True,
     install_requires=["requests", "PySocks"],
-    test_requires=["requests", "PySocks", "unittest"],
+    test_requires=["requests", "PySocks", "unittest", "pytest"],
     python_requires=">=3.6",
     test_suite="tests"
 )
